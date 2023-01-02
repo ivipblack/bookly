@@ -105,23 +105,362 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.fromLTRB(29, 0, 29, 0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        Expanded(
+          child: ListView(
+            shrinkWrap: true,
+            scrollDirection: Axis.vertical,
             children: [
-              Text(
-                "Popular Now",
-                style: TextStyle(fontSize: 20, color: Colors.black),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(29, 0, 29, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Popular Now",
+                      style: TextStyle(fontSize: 20, color: Colors.black),
+                    ),
+                    Text(
+                      "See all",
+                      style: TextStyle(fontSize: 15, color: Colors.black),
+                    ),
+                  ],
+                ),
               ),
-              Text(
-                "See all",
-                style: TextStyle(fontSize: 15, color: Colors.black),
+              //horicontal listview
+              SizedBox(
+                height: height * 0.22,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    SizedBox(
+                      width: width * 0.05,
+                    ),
+                    Image.asset('assets/image 2.png',
+                        width: width * 0.3, height: height * 0.3),
+                    Image.asset('assets/image 3.png',
+                        width: width * 0.3, height: height * 0.3),
+                    Image.asset('assets/image 5.png',
+                        width: width * 0.3, height: height * 0.3),
+                    Image.asset('assets/image 2.png',
+                        width: width * 0.3, height: height * 0.3),
+                  ],
+                ),
+              ),
+              //container with bottom shadow
+              Container(
+                height: height * 0.02,
+                decoration: BoxDecoration(
+                  color: Color(0xFFEFF0D7),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 15,
+                      spreadRadius: -10,
+                      offset: Offset(0, 10),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    SizedBox(
+                      width: width * 0.05,
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: height * 0.03,
+              ),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(29, 0, 29, 0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "New Release",
+                          style: TextStyle(fontSize: 20, color: Colors.black),
+                        ),
+                        Text(
+                          "See all",
+                          style: TextStyle(fontSize: 15, color: Colors.black),
+                        ),
+                      ],
+                    ),
+                  ),
+                  //horicontal listview
+                  SizedBox(
+                    height: height * 0.21,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        SizedBox(
+                          width: width * 0.05,
+                        ),
+                        Image.asset('assets/image 3.png',
+                            width: width * 0.3, height: height * 0.3),
+                        Image.asset('assets/image 2.png',
+                            width: width * 0.3, height: height * 0.3),
+                        Image.asset('assets/image 5.png',
+                            width: width * 0.3, height: height * 0.3),
+                        Image.asset('assets/image 2.png',
+                            width: width * 0.3, height: height * 0.3),
+                      ],
+                    ),
+                  ),
+                  //container with bottom shadow
+                  Container(
+                    height: height * 0.02,
+                    decoration: BoxDecoration(
+                      color: Color(0xFFEFF0D7),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey,
+                          blurRadius: 15,
+                          spreadRadius: -10,
+                          offset: Offset(0, 10),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: height * 0.03,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(29, 0, 29, 0),
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Explore",
+                        style: TextStyle(fontSize: 20, color: Colors.black),
+                      ),
+                      Text(
+                        "See all",
+                        style: TextStyle(fontSize: 15, color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  aCard(
+                      height,
+                      width,
+                      "assets/image 2.png",
+                      "The Call of The Wild",
+                      "John Doe",
+                      "Horror, Fiction",
+                      "2020",
+                      "4.5"),
+                  aCard(
+                      height,
+                      width,
+                      "assets/image 3.png",
+                      "Alice's Adventures",
+                      "Paulo Coelho",
+                      "Non-fiction, Action",
+                      "2019",
+                      "4.6"),
+                  SizedBox(
+                    height: height * 0.035,
+                  ),
+                ]),
               ),
             ],
           ),
         ),
       ]),
+      bottomNavigationBar: SizedBox(
+        height: height * 0.05,
+        child: OverflowBox(
+          maxHeight: double.infinity,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              BottomNavigationBar(
+                backgroundColor: Color(0xFF5A7D6A),
+                type: BottomNavigationBarType.fixed,
+                selectedFontSize: 0,
+                unselectedFontSize: 0,
+                items: const <BottomNavigationBarItem>[
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.home_outlined, size: 30),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.favorite_border_outlined, size: 30),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.bookmark_border, size: 30),
+                    label: '',
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(Icons.person_outline, size: 30),
+                    label: '',
+                  ),
+                ],
+                currentIndex: 0,
+                selectedItemColor: Colors.white,
+                unselectedItemColor: Colors.white54,
+                onTap: null,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding aCard(double height, double width, String image, String title,
+      String author, String category, String publication, String rating) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+      child: Container(
+        height: height * 0.2,
+        width: width,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(25)),
+          color: Color(0xFFF3F3ED),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 20,
+              spreadRadius: -20,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: Row(
+          children: [
+            Container(
+              height: height * 0.2,
+              width: width * 0.3,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25),
+                  bottomLeft: Radius.circular(25),
+                ),
+                image: DecorationImage(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(12, 0, 0, 0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: height * 0.02,
+                  ),
+                  SizedBox(
+                    width: width * 0.5,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          title,
+                          style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold),
+                        ),
+                        Row(children: [
+                          Text(
+                            rating,
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                          Icon(
+                            Icons.star,
+                            color: Colors.yellow,
+                            size: 15,
+                          ),
+                        ])
+                      ],
+                    ),
+                  ),
+                  Text(
+                    "by: $author",
+                    style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(
+                    height: height * 0.01,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Year of Publication: $publication",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.black,
+                          )),
+                      Text("Category: $category ",
+                          style: TextStyle(
+                            fontSize: 12,
+                            color: Colors.black,
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    height: height * 0.028,
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: width * 0.07,
+                      ),
+                      Container(
+                        height: height * 0.04,
+                        width: width * 0.2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(25)),
+                          color: Colors.grey[300],
+                        ),
+                        child: Center(
+                            child: Icon(
+                          Icons.favorite_border,
+                          color: Colors.black,
+                          size: 22,
+                        )),
+                      ),
+                      SizedBox(
+                        width: width * 0.03,
+                      ),
+                      Container(
+                        height: height * 0.04,
+                        width: width * 0.2,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(25)),
+                          color: Color(0xFFEDCA71),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Read",
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 
