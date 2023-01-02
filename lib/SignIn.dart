@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:bookly/homePage.dart';
+import 'package:bookly/Pages/homePage.dart';
+import 'package:bookly/Pages/userHome.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -154,13 +155,10 @@ class _SignInState extends State<SignIn> {
                       ],
                     ),
                     child: InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomePage()),
-                        );
-                      },
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => HomePage()),
+                      ),
                       child: Center(
                         child: const Text(
                           'Sign In',
