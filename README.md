@@ -1,16 +1,8 @@
-# bookly
+#bookly
+This project was done by Ahmed Ali, for a competition by Google club of King abdualaziz University.
+The project is intended for reading, checking, and reviewing books.
 
-A new Flutter project.
+Figma Link of the project User interface design:
+https://www.figma.com/file/E3xwWHIu3t5rdvmaZhereL/Untitled?node-id=0%3A1&t=tILnMkhhKCkoBULu-1
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Thank you!
