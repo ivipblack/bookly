@@ -1,5 +1,5 @@
-import 'package:bookly/Pages/homePage.dart';
-import 'package:bookly/SignIn.dart';
+import 'package:bookly/NavPages/homePage.dart';
+import 'package:bookly/GenerealScreens/SignIn.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Bookly App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         textTheme: GoogleFonts.poppinsTextTheme(
